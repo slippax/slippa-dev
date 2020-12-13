@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/slippa-dev/static/css/main.b8351bf1.chunk.css",
-    "main.js": "/slippa-dev/static/js/main.379560a0.chunk.js",
-    "main.js.map": "/slippa-dev/static/js/main.379560a0.chunk.js.map",
-    "runtime-main.js": "/slippa-dev/static/js/runtime-main.629a7d47.js",
-    "runtime-main.js.map": "/slippa-dev/static/js/runtime-main.629a7d47.js.map",
-    "static/js/2.da56532b.chunk.js": "/slippa-dev/static/js/2.da56532b.chunk.js",
-    "static/js/2.da56532b.chunk.js.map": "/slippa-dev/static/js/2.da56532b.chunk.js.map",
-    "static/js/3.635ffc0b.chunk.js": "/slippa-dev/static/js/3.635ffc0b.chunk.js",
-    "static/js/3.635ffc0b.chunk.js.map": "/slippa-dev/static/js/3.635ffc0b.chunk.js.map",
+    "main.js": "/slippa-dev/static/js/main.88708a8f.chunk.js",
+    "main.js.map": "/slippa-dev/static/js/main.88708a8f.chunk.js.map",
+    "runtime-main.js": "/slippa-dev/static/js/runtime-main.b4c4b059.js",
+    "runtime-main.js.map": "/slippa-dev/static/js/runtime-main.b4c4b059.js.map",
+    "static/js/2.5efcd9e7.chunk.js": "/slippa-dev/static/js/2.5efcd9e7.chunk.js",
+    "static/js/2.5efcd9e7.chunk.js.map": "/slippa-dev/static/js/2.5efcd9e7.chunk.js.map",
+    "static/js/3.d062b4f2.chunk.js": "/slippa-dev/static/js/3.d062b4f2.chunk.js",
+    "static/js/3.d062b4f2.chunk.js.map": "/slippa-dev/static/js/3.d062b4f2.chunk.js.map",
     "index.html": "/slippa-dev/index.html",
     "static/css/main.b8351bf1.chunk.css.map": "/slippa-dev/static/css/main.b8351bf1.chunk.css.map",
-    "static/js/2.da56532b.chunk.js.LICENSE.txt": "/slippa-dev/static/js/2.da56532b.chunk.js.LICENSE.txt"
+    "static/js/2.5efcd9e7.chunk.js.LICENSE.txt": "/slippa-dev/static/js/2.5efcd9e7.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.629a7d47.js",
-    "static/js/2.da56532b.chunk.js",
+    "static/js/runtime-main.b4c4b059.js",
+    "static/js/2.5efcd9e7.chunk.js",
     "static/css/main.b8351bf1.chunk.css",
-    "static/js/main.379560a0.chunk.js"
+    "static/js/main.88708a8f.chunk.js"
   ]
 }
