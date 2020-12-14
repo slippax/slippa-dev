@@ -1,6 +1,7 @@
 import styled, {keyframes} from 'styled-components';
 import {NextButton} from './NextButton';
 import {useRef} from 'react';
+
 const FadeIn = keyframes`
   0% {
     opacity: 0;

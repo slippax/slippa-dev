@@ -6,3 +6,4 @@ export * from './Creations';
 export * from './Project';
 export * from './Header';
 export * from './Switch';
+export * from './Backdrop';

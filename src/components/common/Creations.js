@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { useRef } from 'react';
 import { Project, ProjectAlt } from './Project';
-import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 const FadeIn = keyframes`
   0% {
@@ -51,27 +50,27 @@ export const Creations = () => {
     <div>
       <Wrapper>
         <Container>
-          <Fade top>
+          <Fade bottom>
           <Subtitle>Works.</Subtitle>
           </Fade>
-          <Zoom>
+          <Fade left>
           <Project title="Virus-Trackr" text="Realtime COVID19 data fetched and displayed with simple views. Data fetched from covid19api.com." tech="React" tech2="Styled-Components" linkclick={() => window.open("https://slippax.github.io/virus-trackr")} gitclick={() => window.open("https://github.com/slippax/virus-trackr")} />
-          </Zoom>
-          <Zoom>
+          </Fade>
+          <Fade right>
           <ProjectAlt title="Type King" text="A typing speed test with leaderboard support and profile saving.  See if you can beat the top score!" tech="React" tech2="Google Firebase" linkclick={() => window.open("https://slippax.github.io/type-god")} gitclick={() => window.open("https://github.com/slippax/type-god")} />
-          </Zoom>
-          <Zoom>
+          </Fade>
+          <Fade left>
           <Project title="Todoz" text="A modern take of to do posted notes.  On the go and completed views handled with Redux." tech="React" tech2="Redux" linkclick={() => window.open("https://slippax.github.io/todoz")} gitclick={() => window.open("https://github.com/slippax/todoz")} />
-          </Zoom>
-          <Zoom>
+          </Fade>
+          <Fade right>
           <ProjectAlt title="Weather Grabbr" text="A weather app featuring humidity, sky conditions and much more. Search for weather data anywhere worldwide." tech="React" tech2="OpenWeather" linkclick={() => window.open("https://slippax.github.io/weather-grabbr")} gitclick={() => window.open("https://github.com/slippax/weather-grabbr")} />
-          </Zoom>
-          <Zoom>
+          </Fade>
+          <Fade left>
           <Project title="Portfolio V1" text="My first take on a portfolio site. An interactive experience with smooth scrolling and flashy animations" tech="React" tech2="TypeScript" linkclick={() => window.open("https://slippax.github.io/my-portfolio")} gitclick={() => window.open("https://github.com/slippax/my-portfolio")} />
-          </Zoom>
-          <Zoom>
+          </Fade>
+          <Fade right>
           <ProjectAlt title="Ez-Sens" text="An FPS sensitivity converter for popular PC game titles. Convert mouse sensitivity between a variety of games." tech="React" tech2="CSS Modules" linkclick={() => window.open("https://slippax.github.io/Ez-Sens/")} gitclick={() => window.open("https://github.com/slippax/Ez-Sens")} />
-          </Zoom>
+          </Fade>
         </Container>
       </Wrapper>
       <div ref={myRef}></div>

@@ -47,7 +47,6 @@ const ConnectBox = styled.div`
 display:flex;
 justify-content:center;
 align-items:center;
-margin-bottom: 50px;
 `;
 
 const Box = styled.div`
@@ -62,7 +61,7 @@ export const Contact = () => {
         <div>
         <Wrapper>
         <Container>
-          <Fade top>
+          <Fade bottom>
             <Subtitle>Contact.</Subtitle>
             <Text> I'm currently looking for new opportunities, my inbox is always
                 open. Whether you have a question or just want to say hi, I'll

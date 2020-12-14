@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import {useRef} from 'react';
 import {SiSass, SiJavascript, SiReact, SiNodemon, SiPython, SiRedux} from 'react-icons/si'
-import Zoom from 'react-reveal/Zoom';
 import Fade from 'react-reveal/Fade';
 
 const Wrapper = styled.div`
@@ -40,11 +39,6 @@ margin-bottom:${p => p.first ? '20px':'20px'};
 margin-top:${p => p.second ? '0px':'0'};
 `;
 
-const Button = styled.div`
-text-align:center;
-margin-top: 30px;
-`;
-
 const OuterBox = styled.div`
 display:flex;
 flex-wrap:wrap;
@@ -76,12 +70,11 @@ padding-right: 5px;
 
 export const About = () => {
     let myRef= useRef();
-    const executeScroll = () => myRef.current.scrollIntoView({behavior: "smooth", block: "start"});
     return(
         <div>
         <Wrapper>
         <Container>
-        <Fade top>
+        <Fade bottom>
             <Subtitle>About.</Subtitle>
               <Text>
                 Hello! I'm Stephen, a front end developer based in Toronto,
@@ -97,11 +90,9 @@ export const About = () => {
                 web technologies.
                 Here are a few technologies and languages I've been working with recently:
               </Text>
-            <Button onClick={executeScroll}>
-            </Button>
-            </Fade>
+              </Fade>    
             <TechBox>
-            <Zoom>
+            <Fade bottom>
             <OuterBox>   
                 <Box><IconBox><SiJavascript fontSize={25}/></IconBox> JavaScript</Box>
                 <Box><IconBox><SiReact fontSize={25}/></IconBox> React</Box>
@@ -110,7 +101,7 @@ export const About = () => {
                 <Box><IconBox><SiNodemon fontSize={25}/></IconBox> Node.js</Box>
                 <Box><IconBox><SiPython fontSize={25}/></IconBox> Python</Box>       
                 </OuterBox>
-                </Zoom>
+                </Fade>
                 </TechBox>        
         </Container>
         </Wrapper>
