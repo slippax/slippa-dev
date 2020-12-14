@@ -3,7 +3,6 @@ import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const ProjectContainer = styled.div`
 display:flex;
-flex-basis:33%;
 padding-bottom: 15px;
 `;
 const ProjectBox = styled.div`
@@ -37,6 +36,9 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                   0 1px 18px 0 rgba(0, 0, 0, 0.12),
                   0px 3px 10px -1px rgba(0, 0, 0, 0.4)
 }
+@media(min-width:700px){
+  max-width: 700px;
+}
 `;
 
 const ProjectFooter = styled.div`
@@ -55,7 +57,7 @@ color:${p => p.theme.textBodyFontColor};
 
 const ProjectTechBox = styled.div`
 display:flex;
-justify-content:${p=>p.alt?'right':'none'};
+justify-content:${p=>p.alt?'flex-end':'flex-start'} !important;
 `;
 const ProjectIconBox = styled.div`
 padding-right: 10px;
@@ -69,7 +71,8 @@ font-weight:700;
 
 const ProjectIcons = styled.div`
 display:flex;
-justify-content:${p=>p.alt?'right':'none'};
+justify-content:${p=>p.alt?'flex-end':'flex-start'} !important;
+color:${p=>p.theme.secondaryColor};
 `
 
 export const Project = (props) => {
@@ -92,7 +95,7 @@ export const Project = (props) => {
           </ProjectTechText>
             </ProjectTechBox>
             <ProjectIcons>
-              <ProjectIconBox><FaGithub fontSize={24} /> </ProjectIconBox><ProjectIconBox> <FaExternalLinkAlt fontSize={22} /></ProjectIconBox>
+              <ProjectIconBox><FaGithub onClick={props.gitclick}  fontSize={24} /> </ProjectIconBox><ProjectIconBox> <FaExternalLinkAlt fontSize={22} onClick={props.linkclick} /></ProjectIconBox>
             </ProjectIcons>
           </ProjectFooter>
         </ProjectBox>
@@ -120,7 +123,7 @@ export const ProjectAlt = (props) => {
           </ProjectTechText>
             </ProjectTechBox>
             <ProjectIcons alt>
-              <ProjectIconBox><FaGithub fontSize={24} /> </ProjectIconBox><ProjectIconBox> <FaExternalLinkAlt fontSize={22} /></ProjectIconBox>
+              <ProjectIconBox><FaGithub fontSize={24} onClick={props.gitclick} /> </ProjectIconBox><ProjectIconBox> <FaExternalLinkAlt fontSize={22} onClick={props.linkclick} /></ProjectIconBox>
             </ProjectIcons>
           </ProjectFooter>
         </ProjectBox>

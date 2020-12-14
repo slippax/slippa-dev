@@ -1,20 +1,8 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import {useRef} from 'react';
 import {SiSass, SiJavascript, SiReact, SiNodemon, SiPython, SiRedux} from 'react-icons/si'
-const FadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`;
+import Zoom from 'react-reveal/Zoom';
+import Fade from 'react-reveal/Fade';
 
 const Wrapper = styled.div`
 background:${p=>p.theme.primaryColor};
@@ -29,29 +17,27 @@ padding: 2em;
 max-width: 400px;
 display:flex;
 flex-direction:column;
+@media(min-width:700px){
+  max-width: 700px;
+  font-size:1.2em;
+}
 `;
 
 const Subtitle = styled.p`
-opacity:0;
+opacity:1;
 font-size: 2.5em;
 margin-top: 0;
-font-weight: 600;
+font-weight: 00;
 color: ${p=>p.theme.secondaryColor};
-animation-name:${FadeIn};
-animation-duration: 2s;
-animation-fill-mode:forwards;
 margin-bottom: 20px;
 `;
 const Text = styled.p`
-opacity:0;
+opacity:1;
 color: ${p=>p.theme.bodyFontColor};
 font-size: 1.35em;
 font-weight: 400;
 margin-bottom:${p => p.first ? '20px':'20px'};
 margin-top:${p => p.second ? '0px':'0'};
-animation-name: ${FadeIn};
-animation-fill-mode: forwards;
-animation-duration: 3s;
 `;
 
 const Button = styled.div`
@@ -62,13 +48,15 @@ margin-top: 30px;
 const OuterBox = styled.div`
 display:flex;
 flex-wrap:wrap;
-justify-content:center;
-max-width: 700px;
-width: 100%;
+max-width: 400px;
+@media(min-width:700px){
+  max-width: 700px;
+  padding-left: 100px;
+}
 `;
 
 const Box = styled.div`
-font-weight: 00;
+font-weight: 300;
 font-size: 1.3em;
 width:50%;
 padding-bottom: 25px;
@@ -80,6 +68,12 @@ padding-left:30px;
 width: 100%;
 `;
 
+const IconBox = styled.div`
+color:${p=>p.theme.secondaryColor};
+display:inline-flex;
+padding-right: 5px;
+`;
+
 export const About = () => {
     let myRef= useRef();
     const executeScroll = () => myRef.current.scrollIntoView({behavior: "smooth", block: "start"});
@@ -87,6 +81,7 @@ export const About = () => {
         <div>
         <Wrapper>
         <Container>
+        <Fade top>
             <Subtitle>About.</Subtitle>
               <Text>
                 Hello! I'm Stephen, a front end developer based in Toronto,
@@ -104,16 +99,19 @@ export const About = () => {
               </Text>
             <Button onClick={executeScroll}>
             </Button>
+            </Fade>
             <TechBox>
-            <OuterBox>
-                <Box><SiJavascript fontSize={25}/> JavaScript</Box>
-                <Box><SiReact fontSize={25}/> React</Box>
-                <Box><SiRedux fontSize={25}/> Redux</Box>
-                <Box><SiSass fontSize={25}/> (S)CSS</Box>
-                <Box><SiNodemon fontSize={25}/> Node.js</Box>
-                <Box><SiPython fontSize={25}/> Python</Box>
+            <Zoom>
+            <OuterBox>   
+                <Box><IconBox><SiJavascript fontSize={25}/></IconBox> JavaScript</Box>
+                <Box><IconBox><SiReact fontSize={25}/></IconBox> React</Box>
+                <Box><IconBox><SiRedux fontSize={25}/></IconBox> Redux</Box>
+                <Box><IconBox><SiSass fontSize={25}/></IconBox> (S)CSS</Box>
+                <Box><IconBox><SiNodemon fontSize={25}/></IconBox> Node.js</Box>
+                <Box><IconBox><SiPython fontSize={25}/></IconBox> Python</Box>       
                 </OuterBox>
-                </TechBox>
+                </Zoom>
+                </TechBox>        
         </Container>
         </Wrapper>
         <div ref={myRef}></div>

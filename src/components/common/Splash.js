@@ -1,7 +1,6 @@
 import styled, {keyframes} from 'styled-components';
 import {NextButton} from './NextButton';
 import {useRef} from 'react';
-
 const FadeIn = keyframes`
   0% {
     opacity: 0;
@@ -28,9 +27,18 @@ display: flex;
 align-items:center;
 height:100vh;
 justify-content: center;
+
 `;
 
 const Container = styled.div`
+position:absolute;
+top: 15%;
+@media(min-width:450px){
+  font-size:1.2em;
+}
+@media(min-width: 700px) {
+font-size:1.4em;
+}
 `;
 
 const Title = styled.p`
@@ -43,11 +51,16 @@ animation-duration: 3s;
 animation-fill-mode:forwards;
 animation-delay: 0.5s;
 `;
+
+const NameBox=styled.div`
+display:flex;
+`;
+
 const Subtitle = styled.p`
 opacity:0;
 font-size: 2.5em;
 margin-top: 0;
-font-weight: 600;
+font-weight: 400;
 color: ${p=>p.theme.secondaryColor};
 animation-name: ${FadeIn};
 animation-duration: 2s;
@@ -77,7 +90,9 @@ export const Splash = () => {
         <Wrapper>
         <Container>
             <Title>Hi, my name is</Title>
+            <NameBox>
             <Subtitle>Stephen Lippa.</Subtitle>
+            </NameBox>
             <Text first>I am a front end developer.</Text>
             <Text second>I build things for the web.</Text>
             <Button onClick={executeScroll}>

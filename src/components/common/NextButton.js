@@ -26,7 +26,7 @@ const FadeInSecond = keyframes `
 `;
 
 const MaterialButton = styled(Button)`
-opacity:0;
+opacity:${p=>p.fade? '0' : '1'};
 animation-fill-mode:forwards;
 animation-name: ${FadeInSecond};
 animation-duration: 2s;
@@ -53,7 +53,7 @@ display:flex;
 
 export const NextButton = (props) => {
     return (
-        <MaterialButton disableElevation={true} variant="filled" color="primary"><ArrowDropDownIcon fontSize="large"/><ButtonText>{props.text}</ButtonText></MaterialButton>
+        <MaterialButton fade disableElevation={true} variant="filled" color="primary"><ArrowDropDownIcon fontSize="large"/><ButtonText>{props.text}</ButtonText></MaterialButton>
     );
 }
 export const MailButton = (props) => {
