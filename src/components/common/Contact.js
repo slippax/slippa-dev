@@ -3,7 +3,7 @@ import {useRef} from 'react';
 import {MailButton} from './NextButton';
 import {FaGithubSquare, FaLinkedin} from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
-import { ReactComponent as Keyboard } from '../../images/keyboard.svg';
+import {AnimatedSVG}  from './AnimatedSVG';
 
 const Wrapper = styled.div`
 display:flex;
@@ -60,7 +60,7 @@ justify-content:center;
 text-align:center;
 width: 230px;
 margin: 0 auto;
-margin-bottom:70px;
+margin-bottom:40px;
 @media(min-width: 700px){
   width: 270px;
 }
@@ -85,7 +85,7 @@ export const Contact = () => {
                 <MailButton text="GET IN TOUCH"/>
             </Button>
             <KeyboardBox>
-            <Keyboard/> 
+            <AnimatedSVG/> 
             </KeyboardBox>
             </Fade>
             <Fade top>

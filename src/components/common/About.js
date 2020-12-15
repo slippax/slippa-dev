@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import {useRef} from 'react';
-import {SiSass, SiJavascript, SiReact, SiNodemon, SiPython, SiRedux} from 'react-icons/si'
+import { useRef } from 'react';
+import { SiSass, SiJavascript, SiReact, SiNodemon, SiPython, SiRedux } from 'react-icons/si'
 import Fade from 'react-reveal/Fade';
 
 const Wrapper = styled.div`
-background:${p=>p.theme.primaryColor};
+background:${p => p.theme.primaryColor};
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -27,16 +27,16 @@ opacity:1;
 font-size: 2.5em;
 margin-top: 0;
 font-weight: 00;
-color: ${p=>p.theme.secondaryColor};
+color: ${p => p.theme.secondaryColor};
 margin-bottom: 20px;
 `;
 const Text = styled.p`
 opacity:1;
-color: ${p=>p.theme.bodyFontColor};
+color: ${p => p.theme.bodyFontColor};
 font-size: 1.35em;
 font-weight: 400;
-margin-bottom:${p => p.first ? '20px':'20px'};
-margin-top:${p => p.second ? '0px':'0'};
+margin-bottom:${p => p.first ? '20px' : '20px'};
+margin-top:${p => p.second ? '0px' : '0'};
 `;
 
 const OuterBox = styled.div`
@@ -63,49 +63,49 @@ width: 100%;
 `;
 
 const IconBox = styled.div`
-color:${p=>p.theme.secondaryColor};
+color:${p => p.theme.secondaryColor};
 display:inline-flex;
 padding-right: 5px;
 `;
 
 export const About = () => {
-    let myRef= useRef();
-    return(
-        <div>
-        <Wrapper>
+  let myRef = useRef();
+  return (
+    <div>
+      <Wrapper>
         <Container>
-        <Fade bottom>
+          <Fade bottom>
             <Subtitle>About.</Subtitle>
-              <Text>
-                Hello! I'm Stephen, a front end developer based in Toronto,
-                Canada.
+            <Text>
+              Hello! I'm Stephen, a front end developer based in Toronto,
+              Canada.
                 </Text>
-                <Text>
-                I enjoy creating websites and applications that live on the
-                internet. My goal is to consistently provide pixel-perfect code
-                that functions seamlessly.
+            <Text>
+              I enjoy creating websites and applications that live on the
+              internet. My goal is to consistently provide pixel-perfect code
+              that functions seamlessly.
                 </Text>
-                <Text first>
-                After graduating York University, I found a passion for using
-                web technologies.
-                Here are a few technologies and languages I've been working with recently:
+            <Text first>
+              After graduating York University, I found a passion for using
+              web technologies.
+              Here are a few technologies and languages I've been working with recently:
               </Text>
-              </Fade>    
-            <TechBox>
+          </Fade>
+          <TechBox>
             <Fade bottom>
-            <OuterBox>   
-                <Box><IconBox><SiJavascript fontSize={25}/></IconBox> JavaScript</Box>
-                <Box><IconBox><SiReact fontSize={25}/></IconBox> React</Box>
-                <Box><IconBox><SiRedux fontSize={25}/></IconBox> Redux</Box>
-                <Box><IconBox><SiSass fontSize={25}/></IconBox> (S)CSS</Box>
-                <Box><IconBox><SiNodemon fontSize={25}/></IconBox> Node.js</Box>
-                <Box><IconBox><SiPython fontSize={25}/></IconBox> Python</Box>       
-                </OuterBox>
-                </Fade>
-                </TechBox>        
+              <OuterBox>
+                <Box><IconBox><SiJavascript fontSize={25} /></IconBox> JavaScript</Box>
+                <Box><IconBox><SiReact fontSize={25} /></IconBox> React</Box>
+                <Box><IconBox><SiRedux fontSize={25} /></IconBox> Redux</Box>
+                <Box><IconBox><SiSass fontSize={25} /></IconBox> (S)CSS</Box>
+                <Box><IconBox><SiNodemon fontSize={25} /></IconBox> Node.js</Box>
+                <Box><IconBox><SiPython fontSize={25} /></IconBox> Python</Box>
+              </OuterBox>
+            </Fade>
+          </TechBox>
         </Container>
-        </Wrapper>
-        <div ref={myRef}></div>
-        </div>
-    );
+      </Wrapper>
+      <div ref={myRef}></div>
+    </div>
+  );
 }
