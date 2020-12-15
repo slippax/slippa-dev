@@ -3,6 +3,7 @@ import {useRef} from 'react';
 import {MailButton} from './NextButton';
 import {FaGithubSquare, FaLinkedin} from 'react-icons/fa';
 import Fade from 'react-reveal/Fade';
+import { ReactComponent as Keyboard } from '../../images/keyboard.svg';
 
 const Wrapper = styled.div`
 display:flex;
@@ -40,7 +41,6 @@ text-align:${p=> p.last? 'center' : 'start'};
 
 const Button = styled.div`
 text-align:center;
-margin-bottom: 250px;
 `;
 
 const ConnectBox = styled.div`
@@ -53,6 +53,17 @@ const Box = styled.div`
 color:${p=>p.theme.secondaryColor};
 padding: 5px;
 cursor:pointer;
+`;
+
+const KeyboardBox = styled.div`
+justify-content:center;
+text-align:center;
+width: 230px;
+margin: 0 auto;
+margin-bottom:70px;
+@media(min-width: 700px){
+  width: 270px;
+}
 `;
 
 export const Contact = () => {
@@ -73,8 +84,11 @@ export const Contact = () => {
                   }}>
                 <MailButton text="GET IN TOUCH"/>
             </Button>
+            <KeyboardBox>
+            <Keyboard/> 
+            </KeyboardBox>
             </Fade>
-            <Fade bottom>
+            <Fade top>
                 <Text last>In the meantime, feel free to connect with me.</Text>
                 <ConnectBox>
                   <Box onClick={() => {
@@ -86,7 +100,7 @@ export const Contact = () => {
                     window.open("https://www.linkedin.com/in/stephen-lippa-465203198/");
                   }}>
                   <FaLinkedin fontSize={45}/>
-                </Box >           
+                </Box >    
                 </ConnectBox>
                 </Fade>
         </Container>
