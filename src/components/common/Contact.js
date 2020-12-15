@@ -88,7 +88,7 @@ export const Contact = () => {
             <Keyboard/> 
             </KeyboardBox>
             </Fade>
-            <Fade top>
+            <Fade bottom>
                 <Text last>In the meantime, feel free to connect with me.</Text>
                 <ConnectBox>
                   <Box onClick={() => {
