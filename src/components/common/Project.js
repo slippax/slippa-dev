@@ -83,9 +83,11 @@ justify-content:${p => p.alt ? 'flex-end' : 'flex-start'} !important;
 color:${p => p.theme.secondaryColor};
 `
 const GifBox = styled.div`
+height:221px;
 margin-left: ${p=> p.alt? '30px' : '0px'};
 margin-right: ${p=> p.alt? '0px' : '30px'};
 display:none;
+cursor:pointer;
 align-items:center;
 @media(min-width: 1000px){
   display:flex;
