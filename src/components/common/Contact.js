@@ -60,7 +60,7 @@ justify-content:center;
 text-align:center;
 width: 230px;
 margin: 0 auto;
-margin-bottom:40px;
+margin-bottom:0px;
 @media(min-width: 700px){
   width: 270px;
 }
@@ -72,13 +72,11 @@ export const Contact = () => {
         <div>
         <Wrapper>
         <Container>
-          <Fade bottom>
+          <Fade top>
             <Subtitle>Contact.</Subtitle>
             <Text> I'm currently looking for new opportunities, my inbox is always
                 open. Whether you have a question or just want to say hi, I'll
                 try my best to get back to you!</Text>
-                
-                
                 <Button onClick={() => {
                     window.open("mailto:slippa@me.com");
                   }}>
@@ -87,8 +85,6 @@ export const Contact = () => {
             <KeyboardBox>
             <AnimatedSVG/> 
             </KeyboardBox>
-            </Fade>
-            <Fade bottom>
                 <Text last>In the meantime, feel free to connect with me.</Text>
                 <ConnectBox>
                   <Box onClick={() => {

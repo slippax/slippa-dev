@@ -23,7 +23,6 @@ flex-direction:column;
 `;
 
 const Subtitle = styled.p`
-opacity:1;
 font-size: 2.5em;
 margin-top: 0;
 font-weight: 00;
@@ -74,7 +73,7 @@ export const About = () => {
     <div>
       <Wrapper>
         <Container>
-          <Fade bottom>
+          <Fade top>
             <Subtitle>About.</Subtitle>
             <Text>
               Hello! I'm Stephen, a front end developer based in Toronto,
@@ -90,9 +89,7 @@ export const About = () => {
               web technologies.
               Here are a few technologies and languages I've been working with recently:
               </Text>
-          </Fade>
           <TechBox>
-            <Fade bottom>
               <OuterBox>
                 <Box><IconBox><SiJavascript fontSize={25} /></IconBox> JavaScript</Box>
                 <Box><IconBox><SiReact fontSize={25} /></IconBox> React</Box>
@@ -101,8 +98,8 @@ export const About = () => {
                 <Box><IconBox><SiNodemon fontSize={25} /></IconBox> Node.js</Box>
                 <Box><IconBox><SiPython fontSize={25} /></IconBox> Python</Box>
               </OuterBox>
-            </Fade>
           </TechBox>
+          </Fade>
         </Container>
       </Wrapper>
       <div ref={myRef}></div>

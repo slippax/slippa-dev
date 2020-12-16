@@ -53,13 +53,13 @@ export const Backdrop = () => {
               "top": "out"
             },
             "random": true,
-            "speed": 0.1
+            "speed": 0.2
           },
           "number": {
             "density": {
               "enable": true
             },
-            "value": 60
+            "value": 70
           },
           "opacity": {
             "random": {
@@ -81,7 +81,7 @@ export const Backdrop = () => {
             }
           },
           "size": {
-            "value": 1.5,
+            "value": 1.6,
             "animation": {
               "minimumValue": 0.1,
               "speed": 2
