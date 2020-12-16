@@ -14,9 +14,14 @@ background:${p=>p.theme.primaryColor};
 
 const Container = styled.div`
 padding: 2em;
+padding-bottom: 0.7em;
 max-width: 400px;
 @media(min-width:700px){
   max-width: 700px;
+  font-size:1.2em;
+}
+@media(min-width:1000px){
+  max-width: 1000px;
   font-size:1.2em;
 }
 `;
@@ -58,9 +63,8 @@ cursor:pointer;
 const KeyboardBox = styled.div`
 justify-content:center;
 text-align:center;
-width: 230px;
+width: 225px;
 margin: 0 auto;
-margin-bottom:0px;
 @media(min-width: 700px){
   width: 270px;
 }

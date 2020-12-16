@@ -20,12 +20,16 @@ flex-direction:column;
   max-width: 700px;
   font-size:1.2em;
 }
+@media(min-width:1000px){
+  max-width: 1000px;
+  font-size:1.2em;
+}
 `;
 
 const Subtitle = styled.p`
 font-size: 2.5em;
 margin-top: 0;
-font-weight: 00;
+font-weight: 600;
 color: ${p => p.theme.secondaryColor};
 margin-bottom: 20px;
 `;

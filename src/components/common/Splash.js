@@ -40,6 +40,10 @@ top: 15%;
 @media(min-width: 700px) {
 font-size:1.4em;
 }
+@media(min-width:1000px){
+  max-width: 1000px;
+  font-size:1.5em;
+}
 `;
 
 const Title = styled.p`

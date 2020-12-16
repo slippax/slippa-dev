@@ -3,10 +3,8 @@ import  {KeyboardSVG} from '../../assets/KeyboardSVG';
 export const AnimatedSVG = () => {
     return(
         <SvgLines animate={true}
-        duration={3000}
-        stagger={50}
-        timing="linear"
-       >
+        duration={1000}
+        stagger={500} >
 <KeyboardSVG/>
     </SvgLines>
     );
