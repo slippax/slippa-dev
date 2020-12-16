@@ -90,6 +90,7 @@ display:none;
 cursor:pointer;
 align-items:center;
 @media(min-width: 1000px){
+  cursor:pointer;
   display:flex;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
