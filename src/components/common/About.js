@@ -45,10 +45,10 @@ margin-top:${p => p.second ? '0px' : '0'};
 const OuterBox = styled.div`
 display:flex;
 flex-wrap:wrap;
-max-width: 400px;
+justify-content:center;
+align-items:center;
 @media(min-width:700px){
-  max-width: 700px;
-  padding-left: 100px;
+ max-width:500px;
 }
 `;
 
@@ -60,9 +60,20 @@ padding-bottom: 25px;
 `;
 
 const TechBox = styled.div`
-padding-top: 10px;
-padding-left:30px;
+padding-left: 30px;
+padding-top: 20px;
 width: 100%;
+display:flex;
+justify-content:center;
+align-items:center;
+@media(min-width:700px){
+  padding-top: 40px;
+  font-size:1.1em;
+}
+@media(min-width:1000px){
+  padding-top: 30px;
+  font-size:1.2em;
+}
 `;
 
 const IconBox = styled.div`
