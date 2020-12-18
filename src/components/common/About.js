@@ -6,21 +6,17 @@ import Fade from 'react-reveal/Fade';
 const Wrapper = styled.div`
 background:${p => p.theme.primaryColor};
 display:flex;
-flex-direction:column;
 justify-content:center;
-align-items:center;
 `;
 
 const Container = styled.div`
 padding: 2em;
 max-width: 400px;
-display:flex;
-flex-direction:column;
 @media(min-width:700px){
   max-width: 700px;
-  font-size:1.2em;
+  font-size:1.1em;
 }
-@media(min-width:1000px){
+@media(min-width: 1000px){
   max-width: 1000px;
   font-size:1.2em;
 }
@@ -43,12 +39,20 @@ margin-top:${p => p.second ? '0px' : '0'};
 `;
 
 const OuterBox = styled.div`
+padding-left: 30px;
+padding-top: 20px;
 display:flex;
 flex-wrap:wrap;
-justify-content:center;
-align-items:center;
 @media(min-width:700px){
- max-width:500px;
+  padding-top: 40px;
+ 
+  max-width:500px;
+  padding-left: 100px;
+}
+@media(min-width:1000px){
+   font-size:1.1em;
+  padding-top: 40px;
+  font-size:1.2em;
 }
 `;
 
@@ -60,20 +64,9 @@ padding-bottom: 25px;
 `;
 
 const TechBox = styled.div`
-padding-left: 30px;
-padding-top: 20px;
-width: 100%;
 display:flex;
 justify-content:center;
 align-items:center;
-@media(min-width:700px){
-  padding-top: 40px;
-  font-size:1.1em;
-}
-@media(min-width:1000px){
-  padding-top: 30px;
-  font-size:1.2em;
-}
 `;
 
 const IconBox = styled.div`
@@ -104,7 +97,7 @@ export const About = () => {
               web technologies.
               Here are a few technologies and languages I've been working with recently:
               </Text>
-          <TechBox>
+            <TechBox>
               <OuterBox>
                 <Box><IconBox><SiJavascript fontSize={25} /></IconBox> JavaScript</Box>
                 <Box><IconBox><SiReact fontSize={25} /></IconBox> React</Box>
@@ -113,7 +106,7 @@ export const About = () => {
                 <Box><IconBox><SiNodemon fontSize={25} /></IconBox> Node.js</Box>
                 <Box><IconBox><SiPython fontSize={25} /></IconBox> Python</Box>
               </OuterBox>
-          </TechBox>
+            </TechBox>
           </Fade>
         </Container>
       </Wrapper>

@@ -18,9 +18,9 @@ padding-bottom: 0.7em;
 max-width: 400px;
 @media(min-width:700px){
   max-width: 700px;
-  font-size:1.2em;
+  font-size:1.1em;
 }
-@media(min-width:1000px){
+@media(min-width: 1000px){
   max-width: 1000px;
   font-size:1.2em;
 }

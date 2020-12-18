@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import GifPlayer from 'react-gif-player';
+
 const ProjectContainer = styled.div`
 display:flex;
+align-items:center;
 margin-top: 25px;
 @media(min-width:1000px){
 margin-top: 100px;
@@ -11,13 +13,13 @@ margin-bottom: 75px;
 `;
 const ProjectBox = styled.div`
 border-radius: 6px;
-padding-bottom: 0px;
+padding-top: 5px;
+padding-bottom: 5px;
 border-color: ${p => p.theme.bodyFontColor} !important;
 border-left: ${p => p.alt ? 'none' : '2px solid'};
 border-right: ${p => p.alt ? '2px solid' : 'none'};
 padding-left: ${p => p.alt ? '0px' : '20px'};
 padding-right: ${p => p.alt ? '20px' : '0px'};
-padding-top: 5px;
 `;
 
 const ProjectHead = styled.div`
@@ -67,6 +69,7 @@ const ProjectTechBox = styled.div`
 display:flex;
 justify-content:${p => p.alt ? 'flex-end' : 'flex-start'} !important;
 `;
+
 const ProjectIconBox = styled.div`
 padding-right: 10px;
 cursor: pointer;
