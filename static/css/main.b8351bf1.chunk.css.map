@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,KACE,WAAY,CACZ,QAAS,CACT,gCAAkC,CAClC,kCAAmC,CACnC,iCACF","file":"main.b8351bf1.chunk.css","sourcesContent":["body {\n  height: 100%;\n  margin: 0;\n  font-family: 'Manrope', sans-serif;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n"]}
