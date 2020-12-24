@@ -25,7 +25,8 @@ const OuterBox = styled.div`
   padding-left: 15px;
   @media (min-width: 700px) {
     padding-top: 40px;
-    max-width: 500px;
+    max-width: 700px;
+    width: auto;
   }
   @media (min-width: 1000px) {
     font-size: 1.1em;
@@ -37,7 +38,7 @@ const OuterBox = styled.div`
 
 const Box = styled.div`
   font-weight: 300;
-  padding: 0.9em;
+  padding: 1em;
   display:flex;
   flex-direction:column;
   align-items:center;
@@ -54,9 +55,9 @@ const IconBox = styled.div`
 `;
 
 const Menu = styled.div`
-  border-right: 2px solid #99aab5;
-  max-width: 115px;
+ border-right: 2px solid #99aab5;
   @media(min-width: 700px){
+    width:auto;
     border-right:none;
     border-bottom: 2px solid #99aab5;
     display:flex;
@@ -72,21 +73,28 @@ const Container = styled.div`
 margin-top: 20px;
   display: flex;
   align-items: center;
+  max-width:700px;
   @media (min-width: 700px) {
    flex-direction:column;
    margin-top: 50px;
+   max-width:none;
   }
 `;
 
+const TechBox = styled.div`
+max-width:500px;
+`;
+
 const MenuItem = styled.div`
+width: 100px;
   padding: 5px;
   border-radius: 1px;
   margin-bottom: ${p=> p.last? '0px' : '5px'};
   cursor: pointer;
   @media (min-width: 700px) {
+    width: auto;
    border-top-left-radius: 10px;
    border-top-right-radius: 10px;
-    font-size: 1.1em;
     margin-bottom: 0px;
   }
   ${({ isSelected }) => isSelected && `background-color:#99aab580`};
@@ -138,6 +146,7 @@ export const SkillsBox = () => {
           Storage & Deployment
         </MenuItem>
       </Menu>
+      <TechBox>
         <Pulse when={programming}>
         {programming ? (
           <OuterBox>
@@ -205,13 +214,13 @@ export const SkillsBox = () => {
         <Pulse when={database}>
         {database ? (
           <OuterBox>
-            <Box>
+            <Box less>
               <IconBox>
                 <SiMysql fontSize={25} />
               </IconBox>{" "}
               MySQL
             </Box>
-            <Box>
+            <Box less>
               <IconBox>
                 <SiPostgresql fontSize={25} />
               </IconBox>{" "}
@@ -225,19 +234,19 @@ export const SkillsBox = () => {
         <Pulse when={storage}>
         {storage ? (
           <OuterBox>
-            <Box>
+            <Box less>
               <IconBox>
                 <SiGithub fontSize={25} />
               </IconBox>{" "}
               Github
             </Box>
-            <Box>
+            <Box less>
               <IconBox>
                 <SiNpm fontSize={25} />
               </IconBox>{" "}
               NPM
             </Box>
-            <Box>
+            <Box less>
               <IconBox>
                 <SiAmazonaws fontSize={25} />
               </IconBox>{" "}
@@ -248,6 +257,7 @@ export const SkillsBox = () => {
           <div />
         )}
         </Pulse>
+        </TechBox>
     </Container>
   );
 };
