@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import Pulse from 'react-reveal/Pulse';
+import Pulse from "react-reveal/Pulse";
 import {
   SiSass,
   SiJavascript,
@@ -20,32 +20,33 @@ import {
 const OuterBox = styled.div`
   display: flex;
   flex-wrap: wrap;
-  align-items:center;
-  justify-content:center;
-  padding-left: 15px;
+  align-items: center;
+  justify-content: space-evenly;
   @media (min-width: 700px) {
+    flex-wrap: nowrap;
     padding-top: 40px;
     max-width: 700px;
+    font-size: 1.1em;
     width: auto;
   }
   @media (min-width: 1000px) {
-    font-size: 1.1em;
     padding-top: 40px;
     font-size: 1.2em;
-    max-width: 800px;
+    max-width: 1000px;
   }
 `;
 
 const Box = styled.div`
   font-weight: 300;
-  padding: 1em;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  @media(min-width:700px) {
+padding: 1em;
+padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media (min-width: 700px) {
     padding: 1.5em;
-    padding-bottom:0px;
+    padding-bottom: 0px;
     padding-top: 0px;
   }
 `;
@@ -55,49 +56,70 @@ const IconBox = styled.div`
 `;
 
 const Menu = styled.div`
- border-right: 2px solid #99aab5;
-  @media(min-width: 700px){
-    width:auto;
-    border-right:none;
+  border-right: 2px solid #99aab5;
+  @media (min-width: 700px) {
+    width: auto;
+    border-right: none;
     border-bottom: 2px solid #99aab5;
-    display:flex;
-    max-width:600px;
-    justify-content:center;
+    display: flex;
+    max-width: 600px;
+    justify-content: center;
   }
-  @media(min-width: 1000px){
-    max-width:800px;
+  @media (min-width: 1000px) {
+    max-width: 800px;
   }
 `;
 
 const Container = styled.div`
-margin-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
   display: flex;
   align-items: center;
-  max-width:700px;
-  @media (min-width: 700px) {
-   flex-direction:column;
-   margin-top: 50px;
-   max-width:none;
+  justify-content: center;
+  max-width: 700px;
+  @media (min-width: 1000px) {
+    margin-top: 50px;
   }
 `;
 
 const TechBox = styled.div`
-max-width:500px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  margin-left: 20px;
+  @media(min-width:700px) {
+    margin-left: 0px;
+  }
 `;
 
 const MenuItem = styled.div`
-width: 100px;
+  width: 100px;
   padding: 5px;
   border-radius: 1px;
-  margin-bottom: ${p=> p.last? '0px' : '5px'};
+  margin-bottom: ${(p) => (p.last ? "0px" : "5px")};
+  margin-right: -2px;
   cursor: pointer;
-  @media (min-width: 700px) {
-    width: auto;
-   border-top-left-radius: 10px;
-   border-top-right-radius: 10px;
-    margin-bottom: 0px;
-  }
+  ${({ isSelected }) => isSelected && `border-right: 2px solid #7289da `};
   ${({ isSelected }) => isSelected && `background-color:#99aab580`};
+  @media (min-width: 700px) {
+    ${({ isSelected }) => isSelected && `border-bottom: 2px solid #7289da `};
+    border-right:none;
+    margin-right: 0px;
+    width: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: -2px;
+  }
+  
+`;
+
+const Wrapper = styled.div`
+  display: flex;
+
+  @media (min-width: 700px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const SkillsBox = () => {
@@ -114,150 +136,160 @@ export const SkillsBox = () => {
       setStorage(false);
     };
     refreshBoxes();
-    if (value === 'programming') {
+    if (value === "programming") {
       setProgramming(true);
     }
-    if (value === 'front') {
+    if (value === "front") {
       setFront(true);
     }
-    if (value === 'database') {
+    if (value === "database") {
       setDatabase(true);
     }
-    if (value === 'storage') {
+    if (value === "storage") {
       setStorage(true);
     }
   };
 
   return (
-    <Container>
-      <Menu>
-        <MenuItem
-          onClick={() => techPicker('programming')}
-          isSelected={programming}>
-          Programming Languages
-        </MenuItem>
-        <MenuItem onClick={() => techPicker('front')} isSelected={front}>
-          Front-end Technologies
-        </MenuItem>
-        <MenuItem onClick={() => techPicker('database')} isSelected={database}>
-          Database Technologies
-        </MenuItem>
-        <MenuItem last onClick={() => techPicker('storage')} isSelected={storage}>
-          Storage & Deployment
-        </MenuItem>
-      </Menu>
+    <Wrapper>
+      <Container>
+        <Menu>
+          <MenuItem
+            onClick={() => techPicker("programming")}
+            isSelected={programming}
+          >
+            Programming Languages
+          </MenuItem>
+          <MenuItem onClick={() => techPicker("front")} isSelected={front}>
+            Front-end Technologies
+          </MenuItem>
+          <MenuItem
+            onClick={() => techPicker("database")}
+            isSelected={database}
+          >
+            Database Technologies
+          </MenuItem>
+          <MenuItem
+            last
+            onClick={() => techPicker("storage")}
+            isSelected={storage}
+          >
+            Storage & Deployment
+          </MenuItem>
+        </Menu>
+      </Container>
       <TechBox>
         <Pulse when={programming}>
-        {programming ? (
-          <OuterBox>
-            <Box>
-            <IconBox>
-              <SiJavascript fontSize={25} />
-            </IconBox>{" "}
-            JavaScript
-            </Box>
-            <Box>
-              <IconBox>
-                <SiTypescript fontSize={25} />
-              </IconBox>{" "}
-              TypeScript
-            </Box>
-            <Box>
-              <IconBox>
-                <SiPython fontSize={25} />
-              </IconBox>{" "}
-              Python
-            </Box>
-          </OuterBox>
-        ) : (
-          <div />
-        )}
+          {programming ? (
+            <OuterBox>
+              <Box>
+                <IconBox>
+                  <SiJavascript fontSize={25} />
+                </IconBox>{" "}
+                JavaScript
+              </Box>
+              <Box>
+                <IconBox>
+                  <SiTypescript fontSize={25} />
+                </IconBox>{" "}
+                TypeScript
+              </Box>
+              <Box>
+                <IconBox>
+                  <SiPython fontSize={25} />
+                </IconBox>{" "}
+                Python
+              </Box>
+            </OuterBox>
+          ) : (
+            <div />
+          )}
         </Pulse>
         <Pulse when={front}>
-        {front ? (
-          <OuterBox>
-            <Box>
-              <IconBox>
-                <SiReact fontSize={25} />
-              </IconBox>{" "}
-              React
-            </Box>
-            <Box>
-              <IconBox>
-                <SiRedux fontSize={25} />
-              </IconBox>{" "}
-              Redux
-            </Box>
-            <Box>
-              <IconBox>
-                <SiHtml5 fontSize={25} />
-              </IconBox>{" "}
-              HTML
-            </Box>
-            <Box>
-              <IconBox>
-                <SiCss3 fontSize={25} />
-              </IconBox>{" "}
-              CSS
-            </Box>
-            <Box>
-              <IconBox>
-                <SiSass fontSize={25} />
-              </IconBox>{" "}
-              SASS
-            </Box>
-          </OuterBox>
-        ) : (
-          <div />
-        )}
+          {front ? (
+            <OuterBox>
+              <Box>
+                <IconBox>
+                  <SiReact fontSize={25} />
+                </IconBox>{" "}
+                React
+              </Box>
+              <Box>
+                <IconBox>
+                  <SiRedux fontSize={25} />
+                </IconBox>{" "}
+                Redux
+              </Box>
+              <Box>
+                <IconBox>
+                  <SiHtml5 fontSize={25} />
+                </IconBox>{" "}
+                HTML
+              </Box>
+              <Box>
+                <IconBox>
+                  <SiCss3 fontSize={25} />
+                </IconBox>{" "}
+                CSS
+              </Box>
+              <Box>
+                <IconBox>
+                  <SiSass fontSize={25} />
+                </IconBox>{" "}
+                SASS
+              </Box>
+            </OuterBox>
+          ) : (
+            <div />
+          )}
         </Pulse>
         <Pulse when={database}>
-        {database ? (
-          <OuterBox>
-            <Box less>
-              <IconBox>
-                <SiMysql fontSize={25} />
-              </IconBox>{" "}
-              MySQL
-            </Box>
-            <Box less>
-              <IconBox>
-                <SiPostgresql fontSize={25} />
-              </IconBox>{" "}
-              PostgreSQL
-            </Box>
-          </OuterBox>
-        ) : (
-          <div />
-        )}
+          {database ? (
+            <OuterBox>
+              <Box less>
+                <IconBox>
+                  <SiMysql fontSize={25} />
+                </IconBox>{" "}
+                MySQL
+              </Box>
+              <Box less>
+                <IconBox>
+                  <SiPostgresql fontSize={25} />
+                </IconBox>{" "}
+                PostgreSQL
+              </Box>
+            </OuterBox>
+          ) : (
+            <div />
+          )}
         </Pulse>
         <Pulse when={storage}>
-        {storage ? (
-          <OuterBox>
-            <Box less>
-              <IconBox>
-                <SiGithub fontSize={25} />
-              </IconBox>{" "}
-              Github
-            </Box>
-            <Box less>
-              <IconBox>
-                <SiNpm fontSize={25} />
-              </IconBox>{" "}
-              NPM
-            </Box>
-            <Box less>
-              <IconBox>
-                <SiAmazonaws fontSize={25} />
-              </IconBox>{" "}
-              AWS
-            </Box>
-          </OuterBox>
-        ) : (
-          <div />
-        )}
+          {storage ? (
+            <OuterBox>
+              <Box less>
+                <IconBox>
+                  <SiGithub fontSize={25} />
+                </IconBox>{" "}
+                Github
+              </Box>
+              <Box less>
+                <IconBox>
+                  <SiNpm fontSize={25} />
+                </IconBox>{" "}
+                NPM
+              </Box>
+              <Box less>
+                <IconBox>
+                  <SiAmazonaws fontSize={25} />
+                </IconBox>{" "}
+                AWS
+              </Box>
+            </OuterBox>
+          ) : (
+            <div />
+          )}
         </Pulse>
-        </TechBox>
-    </Container>
+      </TechBox>
+    </Wrapper>
   );
 };
