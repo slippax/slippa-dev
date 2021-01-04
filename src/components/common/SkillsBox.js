@@ -79,6 +79,7 @@ const Container = styled.div`
   max-width: 700px;
   @media (min-width: 1000px) {
     margin-top: 50px;
+    max-width:1000px;
   }
 `;
 

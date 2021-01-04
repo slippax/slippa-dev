@@ -1,30 +1,12 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import {Switch} from './Switch';
 import Headroom from 'react-headroom';
-const FadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`;
+import Fade from 'react-reveal/Fade';
 
 const Wrapper = styled.div`
 background:${p=>p.theme.bodyBackgroundColor} !important;
 width:100%;
 z-index:1;
-opacity:0;
-animation-fill-mode:forwards;
-animation-name: ${FadeIn}; 
-animation-delay:5s;
-animation-duration: 3s;
 `;
 
 const LogoBox = styled.div`
@@ -49,7 +31,6 @@ color: ${p=>p.theme.secondaryColor};
 margin-top: 12px;
 margin-bottom: 12px;
 padding-left : 12px;
-opacity: 1;
 `;
 
 const LinkBox = styled.div`
@@ -93,6 +74,7 @@ export const Header = (props) => {
     
    return(
      <Headroom>
+       <Fade top delay={3000}>
      <Wrapper>
            <Container>
            <LogoBox>
@@ -116,6 +98,7 @@ export const Header = (props) => {
           </LinkBox>
           </Container>
        </Wrapper>
+       </Fade>
        </Headroom>
    ); 
 }

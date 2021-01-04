@@ -1,21 +1,7 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { NextButton } from "../../common/NextButton";
 import { useRef } from "react";
-
-const FadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-`;
+import Fade from 'react-reveal/Zoom';
 
 const Button = styled.div`
   text-align: center;
@@ -44,14 +30,9 @@ const Container = styled.div`
 `;
 
 const Title = styled.p`
-  opacity: 0;
   font-size: 2em;
   margin-bottom: 0;
   font-weight: 300;
-  animation-name: ${FadeIn};
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-delay: 0.5s;
 `;
 
 const NameBox = styled.div`
@@ -59,27 +40,17 @@ const NameBox = styled.div`
 `;
 
 const Subtitle = styled.p`
-  opacity: 0;
   font-size: 2.5em;
   margin-top: 0;
   font-weight: 400;
   color: ${(p) => p.theme.secondaryColor};
-  animation-name: ${FadeIn};
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-delay: 1.5s;
 `;
 const Text = styled.p`
-  opacity: 0;
   color: ${(p) => p.theme.bodyFontColor};
   font-size: 1.7em;
   font-weight: 300;
   margin-bottom: ${(p) => (p.first ? "0px" : "0")};
   margin-top: ${(p) => (p.second ? "0px" : "0")};
-  animation-name: ${FadeIn};
-  animation-fill-mode: forwards;
-  animation-duration: 3s;
-  animation-delay: ${(p) => (p.first ? "3s" : "4s")};
 `;
 
 export const Splash = () => {
@@ -91,15 +62,18 @@ export const Splash = () => {
     <div>
       <Wrapper>
         <Container>
-          <Title>Hi, my name is</Title>
+          
+          <Title><Fade cascade>Hi, my name is</Fade></Title>
           <NameBox>
-            <Subtitle>Stephen Lippa.</Subtitle>
+            <Subtitle><Fade cascade delay={500}>Stephen Lippa.</Fade></Subtitle>
           </NameBox>
-          <Text first>I am a front end developer.</Text>
-          <Text second>I build things for the web.</Text>
+          <Text first><Fade cascade delay={1500}>I am a front end developer.</Fade></Text>
+          <Text second><Fade cascade delay={2000}>I build things for the web.</Fade></Text>
+          <Fade delay={3000}>
           <Button onClick={executeScroll}>
             <NextButton text="VIEW" />
           </Button>
+          </Fade>
         </Container>
       </Wrapper>
       <div ref={myRef}></div>

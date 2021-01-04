@@ -1,36 +1,9 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import {FaEnvelope} from 'react-icons/fa';
-const FadeInSecond = keyframes `
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-  0% {
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-`;
 
 const MaterialButton = styled(Button)`
-opacity:${p=>p.fade? '0' : '1'};
-animation-fill-mode:forwards;
-animation-name: ${FadeInSecond};
-animation-duration: 2s;
-animation-delay: 5.5s;
   background:${p=>p.theme.secondaryColor} !important;
   && {
       font-size: 1.1em;
