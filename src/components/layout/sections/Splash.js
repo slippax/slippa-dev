@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   position: absolute;
-  top: 15%;
+  top: 19%;
   @media (min-width: 450px) {
     font-size: 1.2em;
   }
@@ -29,7 +29,7 @@ const Container = styled.div`
   }
 `;
 
-const Title = styled.p`
+const Title = styled.div`
   font-size: 2em;
   margin-bottom: 0;
   font-weight: 300;
@@ -39,13 +39,14 @@ const NameBox = styled.div`
   display: flex;
 `;
 
-const Subtitle = styled.p`
+const Subtitle = styled.div`
+margin-bottom: 40px;
   font-size: 2.5em;
   margin-top: 0;
   font-weight: 400;
   color: ${(p) => p.theme.secondaryColor};
 `;
-const Text = styled.p`
+const Text = styled.div`
   color: ${(p) => p.theme.bodyFontColor};
   font-size: 1.7em;
   font-weight: 300;

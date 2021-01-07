@@ -25,11 +25,11 @@ const Container = styled.div`
 `;
 
 const Subtitle = styled.p`
-  font-size: ${p=>p.alt ? '2em' : '2.5em'};
+  font-size: ${p=>p.subsection ? '2em' : '2.5em'};
   margin-top: 0;
   font-weight: 600;
   color: ${(p) => p.theme.secondaryColor};
-  margin-bottom:  ${p=>p.alt ? '0px' : '20px'};
+  margin-bottom:  ${p=>p.subsection ? '0px' : '20px'};
 `;
 
 
@@ -62,7 +62,7 @@ export const About = () => {
             <Text>
             After graduating York University, I found a passion for using web technologies. Here are a few technologies and languages I've been working with:
             </Text>
-           <Subtitle alt>Specialties.</Subtitle>
+           <Subtitle subsection>Specialties.</Subtitle>
             <SkillsBox />
           </Fade>
         </Container>

@@ -16,14 +16,14 @@ border-radius: 6px;
 padding-top: 5px;
 padding-bottom: 5px;
 border-color: ${p => p.theme.bodyFontColor} !important;
-border-left: ${p => p.alt ? 'none' : '2px solid'};
-border-right: ${p => p.alt ? '2px solid' : 'none'};
-padding-left: ${p => p.alt ? '0px' : '20px'};
-padding-right: ${p => p.alt ? '20px' : '0px'};
+border-left: ${p => p.flip ? 'none' : '2px solid'};
+border-right: ${p => p.flip ? '2px solid' : 'none'};
+padding-left: ${p => p.flip ? '0px' : '20px'};
+padding-right: ${p => p.flip ? '20px' : '0px'};
 `;
 
 const ProjectHead = styled.div`
-text-align: ${p => p.alt ? 'right' : 'left'};
+text-align: ${p => p.flip ? 'right' : 'left'};
 `;
 
 const ProjectBody = styled.div`
@@ -32,7 +32,7 @@ padding-top: 1px;
 padding-bottom: 1px;
 border-radius: 6px;
 background:${p => p.theme.textBodyBackground} !important;
-text-align:${p => p.alt ? 'right' : 'left'};
+text-align:${p => p.flip ? 'right' : 'left'};
 max-width:400px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
@@ -67,7 +67,7 @@ color:${p => p.theme.textBodyFontColor};
 
 const ProjectTechBox = styled.div`
 display:flex;
-justify-content:${p => p.alt ? 'flex-end' : 'flex-start'} !important;
+justify-content:${p => p.flip ? 'flex-end' : 'flex-start'} !important;
 `;
 
 const ProjectIconBox = styled.div`
@@ -82,14 +82,14 @@ font-weight:700;
 
 const ProjectIcons = styled.div`
 display:flex;
-justify-content:${p => p.alt ? 'flex-end' : 'flex-start'} !important;
+justify-content:${p => p.flip ? 'flex-end' : 'flex-start'} !important;
 color:${p => p.theme.secondaryColor};
 `
 const GifBox = styled.div`
 height:220px;
 width: 475px;
-margin-left: ${p=> p.alt? '30px' : '0px'};
-margin-right: ${p=> p.alt? '0px' : '30px'};
+margin-left: ${p=> p.flip? '30px' : '0px'};
+margin-right: ${p=> p.flip? '0px' : '30px'};
 display:none;
 cursor:pointer;
 align-items:center;
@@ -143,15 +143,15 @@ export const ProjectAlt = (props) => {
   return (
     <ProjectContainer>
          
-      <ProjectBox alt>
-        <ProjectHead alt><ProjectTitle>
+      <ProjectBox flip>
+        <ProjectHead flip><ProjectTitle>
           {props.title}
         </ProjectTitle></ProjectHead>
-        <ProjectBody alt><ProjectText>
+        <ProjectBody flip><ProjectText>
           {props.text}
         </ProjectText></ProjectBody>
         <ProjectFooter>
-          <ProjectTechBox alt>
+          <ProjectTechBox flip>
             <ProjectTechText>
               {props.tech}
             </ProjectTechText>
@@ -159,12 +159,12 @@ export const ProjectAlt = (props) => {
               {props.tech2}
             </ProjectTechText>
           </ProjectTechBox>
-          <ProjectIcons alt>
+          <ProjectIcons flip>
             <ProjectIconBox><FaGithub fontSize={24} onClick={props.gitclick} /> </ProjectIconBox><ProjectIconBox> <FaExternalLinkAlt fontSize={22} onClick={props.linkclick} /></ProjectIconBox>
           </ProjectIcons>
         </ProjectFooter>
       </ProjectBox>
-      <GifBox alt>
+      <GifBox flip>
       <GifPlayer gif={props.gif} still={props.image} />
       </GifBox>
     </ProjectContainer>

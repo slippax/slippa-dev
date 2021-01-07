@@ -29,7 +29,8 @@ const Layout = () => {
   let about = useRef();
   let creations = useRef();
   let contact = useRef();
-  const executeAboutScroll = () => {
+  const executeAboutScroll = (value) => {
+    console.log(value)
     about.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   const executeCreationsScroll = () => {
@@ -39,6 +40,7 @@ const Layout = () => {
     contact.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
   const [theme, setTheme] = useState(LightTheme);
+  
   const themeSetter = (value) => {
     console.log(value);
     if (value) {

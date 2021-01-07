@@ -26,11 +26,11 @@ display:flex;
 
 export const NextButton = (props) => {
     return (
-        <MaterialButton fade disableElevation={true} variant="filled" color="primary"><ArrowDropDownIcon fontSize="large"/><ButtonText>{props.text}</ButtonText></MaterialButton>
+        <MaterialButton disableElevation={true} variant="contained" color="primary"><ArrowDropDownIcon fontSize="large"/><ButtonText>{props.text}</ButtonText></MaterialButton>
     );
 }
 export const MailButton = (props) => {
   return (
-      <MaterialButton disableElevation={true} variant="filled" color="primary"><ButtonBox><FaEnvelope fontSize="large"/></ButtonBox><ButtonText>{props.text}</ButtonText></MaterialButton>
+      <MaterialButton disableElevation={true} variant="contained" color="primary"><ButtonBox><FaEnvelope fontSize="large"/></ButtonBox><ButtonText>{props.text}</ButtonText></MaterialButton>
   );
 }
