@@ -5,6 +5,8 @@ import { createGlobalStyle, ThemeProvider } from "styled-components";
 import LightTheme from "../themes/light";
 import DarkTheme from "../themes/dark";
 import styled from "styled-components";
+import PageProgress from 'react-page-progress';
+
 const GlobalStyle = createGlobalStyle`
 body {
   background: ${(p) => p.theme.bodyBackgroundColor};
@@ -48,6 +50,7 @@ const Layout = () => {
 
   return (
     <div>
+      <PageProgress color={'#7289da'} height={3}/>
       <Particles>
         <Backdrop />
       </Particles>
