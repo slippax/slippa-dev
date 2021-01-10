@@ -60,7 +60,7 @@ export const About = () => {
               that functions seamlessly.
             </Text>
             <Text>
-            After graduating York University, I found a passion for using web technologies. Here are a few technologies and languages I've been working with:
+            After graduating York University, I found a passion for using web technologies. Here are the technologies and languages I've been working with:
             </Text>
            <Subtitle subsection>Specialties.</Subtitle>
             <SkillsBox />
