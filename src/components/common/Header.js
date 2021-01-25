@@ -68,6 +68,7 @@ align-items:center;
 const Button = styled.div`
 display:flex;
 padding-left: 15px;
+outline:none;
 `;
 
 export const Header = (props) => {

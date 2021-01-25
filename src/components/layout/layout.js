@@ -39,7 +39,7 @@ const Layout = () => {
   const executeContactScroll = () => {
     contact.current.scrollIntoView({ behavior: "smooth", block: "start" });
   };
-  const [theme, setTheme] = useState(LightTheme);
+  const [theme, setTheme] = useState(DarkTheme);
   
   const themeSetter = (value) => {
     console.log(value);
