@@ -7,7 +7,8 @@ const theme = {
     bodyBackgroundColor: '#ffffff',
     bodyBackgroundSecondaryColor: '#99aab5',
     bodyFontColor: '#23272a',
-    borderColor: '#ffffff'
+    borderColor: '#ffffff',
+    headerColor: '#FFFFFFB3'
   };
 
   export default theme;
