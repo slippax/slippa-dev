@@ -16,6 +16,13 @@ body {
 }
 `;
 
+const BottomTag = styled.div `
+display:flex;
+justify-content:center;
+margin-top: -25px;
+margin-bottom: 25px;
+`;
+
 const Particles = styled.div`
   width: 100%;
   height: 100%;
@@ -81,6 +88,8 @@ const Layout = () => {
         <div ref={contact} />
         <WavesEntry/>
         <Contact />
+        <WavesEnd/>
+        <BottomTag>Built by Stephen Lippa | 2021</BottomTag>
       </ThemeProvider>
     </div>
   );
