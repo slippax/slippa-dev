@@ -19,8 +19,8 @@ body {
 const BottomTag = styled.div `
 display:flex;
 justify-content:center;
-margin-top: -25px;
-margin-bottom: 25px;
+margin-top: -45px;
+margin-bottom: 20px;
 `;
 
 const Particles = styled.div`
