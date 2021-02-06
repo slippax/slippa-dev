@@ -12,6 +12,9 @@ const Wave = styled.div`
   @media (max-width:499px) {
     background-size: contain;
  }
+ @media (max-width:600px) {
+   height: 100px;
+ }
 `;
 
 export const WavesEntry = () => {
