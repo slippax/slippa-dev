@@ -8,7 +8,8 @@ const theme = {
     bodyBackgroundSecondaryColor: '#99aab5',
     bodyFontColor: '#23272a',
     borderColor: '#ffffff',
-    headerColor: '#FFFFFFB3'
+    headerColor: '#FFFFFFB3',
+    waveColor: 'rgba(229, 229, 229, 1)'
   };
 
   export default theme;

@@ -18,7 +18,6 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   padding: 1em;
-  padding-top: 1.5em;
   @media (min-width: 700px) {
     padding: 2em;
     max-width: 700px;
@@ -47,10 +46,10 @@ export const Creations = () => {
     <div>
       <Wrapper>
         <Container>
-          <Fade top>
+          <Fade top delay="200">
             <Subtitle>Works.</Subtitle>
           </Fade>
-          <Fade left>
+          <Fade left delay="400">
             <Project
               gif={virusgif}
               image={virusimg}
@@ -66,7 +65,7 @@ export const Creations = () => {
               }
             />
           </Fade>
-          <Fade right>
+          <Fade right delay="400">
             <ProjectAlt
               gif={typegif}
               image={typeimg}
@@ -82,7 +81,7 @@ export const Creations = () => {
               }
             />
           </Fade>
-          <Fade left>
+          <Fade left delay="400">
             <Project
               gif={todogif}
               image={todoimg}
@@ -94,7 +93,7 @@ export const Creations = () => {
               gitclick={() => window.open("https://github.com/slippax/todoz")}
             />
           </Fade>
-          <Fade right>
+          <Fade right delay="400">
             <ProjectAlt
               gif={ezgif}
               image={ezimg}

@@ -6,3 +6,4 @@ export * from "./Backdrop";
 export * from "./AnimatedSVG";
 export * from "./SkillsBox";
 export * from "./Toast";
+export * from "./Waves"

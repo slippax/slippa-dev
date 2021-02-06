@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { Header, Backdrop } from "../common/";
+import { Header, Backdrop, WavesEntry, WavesEnd } from "../common/";
 import { Splash, About, Contact, Creations } from "./sections";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import LightTheme from "../themes/light";
@@ -73,10 +73,13 @@ const Layout = () => {
         />
         <Splash />
         <div ref={about} />
+        <WavesEntry/>
         <About />
+        <WavesEnd/>
         <div ref={creations} />
         <Creations />
         <div ref={contact} />
+        <WavesEntry/>
         <Contact />
       </ThemeProvider>
     </div>
