@@ -37,6 +37,8 @@ const Subtitle = styled.p`
   font-size: 2.5em;
   margin-top: 0;
   font-weight: 600;
+  margin-top: -25px;
+  margin-bottom:10px;
   color: ${(p) => p.theme.secondaryColor};
   @media (min-width: 1000px) {
     margin-bottom: -50px;
