@@ -58,9 +58,6 @@ export const About = () => {
               internet. My goal is to consistently provide pixel-perfect code
               that functions seamlessly.
             </Text>
-            <Text>
-            After graduating York University, I found a passion for using web technologies. Here are the technologies and languages I've been working with:
-            </Text>
            <Subtitle subsection>Specialties.</Subtitle>
             <SkillsBox />
           </Fade>

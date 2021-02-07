@@ -66,11 +66,11 @@ export const Splash = () => {
           
           <Title><Fade cascade>Hi, my name is</Fade></Title>
           <NameBox>
-            <Subtitle><Fade cascade delay={500}>Stephen Lippa.</Fade></Subtitle>
+            <Subtitle><Fade cascade>Stephen Lippa.</Fade></Subtitle>
           </NameBox>
           <Text first><Fade cascade delay={1500}>I am a front end developer.</Fade></Text>
-          <Text second><Fade cascade delay={2500}>I build things for the web.</Fade></Text>
-          <Fade delay={3500}>
+          <Text second><Fade cascade delay={1500}>I build things for the web.</Fade></Text>
+          <Fade delay={2500}>
           <Button onClick={executeScroll}>
             <NextButton text="VIEW" />
           </Button>

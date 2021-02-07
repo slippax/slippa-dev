@@ -79,7 +79,7 @@ export const Header = (props) => {
     
    return(
      <Headroom>
-       <Fade top delay={3500}>
+       <Fade top delay={2500}>
      <Wrapper>
            <Container>
            <LogoBox>

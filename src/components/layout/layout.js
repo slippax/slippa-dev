@@ -6,6 +6,7 @@ import LightTheme from "../themes/light";
 import DarkTheme from "../themes/dark";
 import styled from "styled-components";
 import PageProgress from 'react-page-progress';
+import Flip from 'react-reveal/Bounce';
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -19,15 +20,17 @@ body {
 const BottomTag = styled.div `
 display:flex;
 justify-content:center;
-margin-top: -45px;
+margin-top: -30px;
 margin-bottom: 20px;
+font-size:1.1em;
+font-weight: 500;
 `;
 
 const Particles = styled.div`
   width: 100%;
   height: 100%;
   position: fixed;
-  z-index: -10;
+  z-index: -1;
   top: 0;
   left: 0;
 `;
@@ -89,7 +92,7 @@ const Layout = () => {
         <WavesEntry/>
         <Contact />
         <WavesEnd/>
-        <BottomTag>Built by Stephen Lippa | 2021</BottomTag>
+        <BottomTag><Flip cascade delay="400">Built by Stephen Lippa | 2021</Flip></BottomTag>
       </ThemeProvider>
     </div>
   );
