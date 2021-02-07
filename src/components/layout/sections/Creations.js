@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { useRef } from "react";
 import { Project, ProjectAlt } from "../../common/Project";
-import Fade from "react-reveal/Fade";
+import Fade from "react-reveal/Zoom";
+import Zoom from 'react-reveal/Fade';
 import virusimg from "../../../assets/WorkViews/virustrackr.JPG";
 import virusgif from "../../../assets/WorkViews/virustrackr.gif";
 import typeimg from "../../../assets/WorkViews/typeking.JPG";
@@ -18,14 +19,17 @@ const Wrapper = styled.div`
 
 const Container = styled.div`
   padding: 1em;
+  padding-bottom: 0px;
   @media (min-width: 700px) {
     padding: 2em;
     max-width: 700px;
     font-size: 1.1em;
+    padding-bottom: 0px;
   }
   @media (min-width: 1000px) {
     max-width: 1000px;
     font-size: 1.2em;
+    padding-bottom: 0px;
   }
 `;
 
@@ -37,6 +41,7 @@ const Subtitle = styled.p`
   color: ${(p) => p.theme.secondaryColor};
   @media (min-width: 1000px) {
     margin-bottom: -50px;
+    margin-top: -50px;
   }
 `;
 
@@ -46,10 +51,10 @@ export const Creations = () => {
     <div>
       <Wrapper>
         <Container>
-          <Fade top delay="200">
+          <Zoom>
             <Subtitle>Works.</Subtitle>
-          </Fade>
-          <Fade left delay="400">
+          </Zoom>
+          <Fade>
             <Project
               gif={virusgif}
               image={virusimg}
@@ -65,7 +70,7 @@ export const Creations = () => {
               }
             />
           </Fade>
-          <Fade right delay="400">
+          <Fade>
             <ProjectAlt
               gif={typegif}
               image={typeimg}
@@ -81,7 +86,7 @@ export const Creations = () => {
               }
             />
           </Fade>
-          <Fade left delay="400">
+          <Fade>
             <Project
               gif={todogif}
               image={todoimg}
@@ -93,7 +98,7 @@ export const Creations = () => {
               gitclick={() => window.open("https://github.com/slippax/todoz")}
             />
           </Fade>
-          <Fade right delay="400">
+          <Fade>
             <ProjectAlt
               gif={ezgif}
               image={ezimg}
