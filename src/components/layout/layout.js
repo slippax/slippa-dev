@@ -6,7 +6,7 @@ import LightTheme from "../themes/light";
 import DarkTheme from "../themes/dark";
 import styled from "styled-components";
 import PageProgress from 'react-page-progress';
-import Flip from 'react-reveal/Bounce';
+import Flip from 'react-reveal/Zoom';
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -92,7 +92,7 @@ const Layout = () => {
         <WavesEntry/>
         <Contact />
         <WavesEnd/>
-        <BottomTag><Flip cascade delay="400">Built by Stephen Lippa | 2021</Flip></BottomTag>
+        <BottomTag><Flip cascade delay={400}>Built by Stephen Lippa | 2021</Flip></BottomTag>
       </ThemeProvider>
     </div>
   );

@@ -14,7 +14,7 @@ const Wave = styled.div`
     background-size: contain;
  }
  @media (max-width:600px) {
-   height: 100px;
+   height: 85px;
  }
 `;
 

@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { useRef } from "react";
 import { Project, ProjectAlt } from "../../common/Project";
-import Fade from "react-reveal/Zoom";
-import Zoom from 'react-reveal/Fade';
+import Fade from "react-reveal/Fade";
 import virusimg from "../../../assets/WorkViews/virustrackr.JPG";
 import virusgif from "../../../assets/WorkViews/virustrackr.gif";
 import typeimg from "../../../assets/WorkViews/typeking.JPG";
@@ -51,10 +50,10 @@ export const Creations = () => {
     <div>
       <Wrapper>
         <Container>
-          <Zoom>
+          <Fade top>
             <Subtitle>Works.</Subtitle>
-          </Zoom>
-          <Fade>
+          </Fade>
+          <Fade top delay={100}>
             <Project
               gif={virusgif}
               image={virusimg}
@@ -70,7 +69,7 @@ export const Creations = () => {
               }
             />
           </Fade>
-          <Fade>
+          <Fade top delay={100}>
             <ProjectAlt
               gif={typegif}
               image={typeimg}
@@ -86,7 +85,7 @@ export const Creations = () => {
               }
             />
           </Fade>
-          <Fade>
+          <Fade top delay={100}>
             <Project
               gif={todogif}
               image={todoimg}
@@ -98,7 +97,7 @@ export const Creations = () => {
               gitclick={() => window.open("https://github.com/slippax/todoz")}
             />
           </Fade>
-          <Fade>
+          <Fade top delay={100}>
             <ProjectAlt
               gif={ezgif}
               image={ezimg}
