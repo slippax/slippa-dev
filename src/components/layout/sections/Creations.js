@@ -35,13 +35,13 @@ const Container = styled.div`
 const Subtitle = styled.p`
   opacity: 1;
   font-size: 2.5em;
-  margin-top: 0;
+  margin-bottom: 0;
   font-weight: 600;
-  margin-top: -25px;
+  margin-bottom: -25px;
   color: ${(p) => p.theme.secondaryColor};
   @media (min-width: 1000px) {
     margin-bottom: -50px;
-    margin-top: -50px;
+    margin-bottom: -50px;
   }
 `;
 
@@ -51,10 +51,10 @@ export const Creations = () => {
     <div>
       <Wrapper>
         <Container>
-          <Fade top>
+          <Fade bottom>
             <Subtitle>Works.</Subtitle>
           </Fade>
-          <Fade top delay={100}>
+          <Fade bottom delay={100}>
             <Project
               gif={virusgif}
               image={virusimg}
@@ -70,12 +70,12 @@ export const Creations = () => {
               }
             />
           </Fade>
-          <Fade top delay={100}>
+          <Fade bottom delay={100}>
             <ProjectAlt
               gif={typegif}
               image={typeimg}
               title="Type King"
-              text="A typing speed test with leaderboard support and profile saving.  See if you can beat the top score!"
+              text="A typing speed test with leaderboard support and profile saving.  See if you can beat the bottom score!"
               tech="React"
               tech2="Google Firebase"
               linkclick={() =>
@@ -86,7 +86,7 @@ export const Creations = () => {
               }
             />
           </Fade>
-          <Fade top delay={100}>
+          <Fade bottom delay={100}>
             <Project
               gif={todogif}
               image={todoimg}
@@ -98,7 +98,7 @@ export const Creations = () => {
               gitclick={() => window.open("https://github.com/slippax/todoz")}
             />
           </Fade>
-          <Fade top delay={100}>
+          <Fade bottom delay={100}>
             <ProjectAlt
               gif={ezgif}
               image={ezimg}

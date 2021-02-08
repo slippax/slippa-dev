@@ -76,7 +76,7 @@ export const Contact = () => {
     <div>
       <Wrapper>
         <Container>
-          <Fade top>
+          <Fade bottom>
             <Subtitle>Contact.</Subtitle>
             <Text>
               {" "}
