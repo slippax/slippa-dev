@@ -35,12 +35,11 @@ const Container = styled.div`
 const Subtitle = styled.p`
   opacity: 1;
   font-size: 2.5em;
+  margin-top:0;
   margin-bottom: 0;
   font-weight: 600;
-  margin-bottom: -25px;
   color: ${(p) => p.theme.secondaryColor};
   @media (min-width: 1000px) {
-    margin-bottom: -50px;
     margin-bottom: -50px;
   }
 `;

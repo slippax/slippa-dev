@@ -92,7 +92,7 @@ const Layout = () => {
         <WavesEntry/>
         <Contact />
         <WavesEnd/>
-        <BottomTag><Flip cascade delay={400}>Built by Stephen Lippa | 2021</Flip></BottomTag>
+        <BottomTag><Flip cascade delay={200}>Built by Stephen Lippa | 2021</Flip></BottomTag>
       </ThemeProvider>
     </div>
   );

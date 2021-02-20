@@ -47,7 +47,7 @@ export const About = () => {
     <div>
       <Wrapper>
         <Container>
-          <Fade botom>
+          <Fade bottom>
             <Subtitle>About.</Subtitle>
             <Text>
               Hello! I'm Stephen, a front end developer based in Toronto,
