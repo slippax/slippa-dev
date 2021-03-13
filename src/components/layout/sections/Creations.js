@@ -53,7 +53,7 @@ export const Creations = () => {
           <Fade bottom>
             <Subtitle>Works.</Subtitle>
           </Fade>
-          <Fade bottom delay={100}>
+          <Fade left bottom delay={100}>
             <Project
               gif={virusgif}
               image={virusimg}
@@ -69,7 +69,7 @@ export const Creations = () => {
               }
             />
           </Fade>
-          <Fade bottom delay={100}>
+          <Fade right bottom delay={100}>
             <ProjectAlt
               gif={typegif}
               image={typeimg}
@@ -85,7 +85,7 @@ export const Creations = () => {
               }
             />
           </Fade>
-          <Fade bottom delay={100}>
+          <Fade left bottom delay={100}>
             <Project
               gif={todogif}
               image={todoimg}
@@ -97,7 +97,7 @@ export const Creations = () => {
               gitclick={() => window.open("https://github.com/slippax/todoz")}
             />
           </Fade>
-          <Fade bottom delay={100}>
+          <Fade right bottom delay={100}>
             <ProjectAlt
               gif={ezgif}
               image={ezimg}

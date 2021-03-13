@@ -15,6 +15,10 @@ import {
   SiGithub,
   SiNpm,
   SiAmazonaws,
+  SiVueDotJs,
+  SiTailwindcss,
+  SiBootstrap,
+  SiMariadb
 } from "react-icons/si";
 
 const OuterBox = styled.div`
@@ -223,21 +227,27 @@ export const SkillsBox = () => {
               </Box>
               <Box>
                 <IconBox>
-                  <SiHtml5 fontSize={25} />
+                  <SiVueDotJs fontSize={25} />
                 </IconBox>{" "}
-                HTML
+                Vue
               </Box>
               <Box>
                 <IconBox>
-                  <SiCss3 fontSize={25} />
+                  <SiTailwindcss fontSize={25} />
                 </IconBox>{" "}
-                CSS
+                Tailwind
               </Box>
               <Box>
                 <IconBox>
                   <SiSass fontSize={25} />
                 </IconBox>{" "}
                 SASS
+              </Box>
+              <Box>
+                <IconBox>
+                  <SiBootstrap fontSize={25} />
+                </IconBox>{" "}
+                Bootstrap
               </Box>
             </OuterBox>
           ) : (
@@ -258,6 +268,12 @@ export const SkillsBox = () => {
                   <SiPostgresql fontSize={25} />
                 </IconBox>{" "}
                 PostgreSQL
+              </Box>
+              <Box less>
+                <IconBox>
+                  <SiMariadb fontSize={25} />
+                </IconBox>{" "}
+                MariaDB
               </Box>
             </OuterBox>
           ) : (
