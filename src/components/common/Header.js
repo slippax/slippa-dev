@@ -6,6 +6,7 @@ import Fade from 'react-reveal/Fade';
 const Wrapper = styled.div`
 background:${p=>p.theme.headerColor} !important;
 width:100%;
+z-index:1;
 backdrop-filter: saturate(180%) blur(20px); 
 &:hover {
   background:${p=>p.theme.bodyBackgroundColor} !important;
