@@ -190,19 +190,19 @@ export const SkillsBox = () => {
               <Box>
                 <IconBox>
                   <SiJavascript fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 JavaScript
               </Box>
               <Box>
                 <IconBox>
                   <SiTypescript fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 TypeScript
               </Box>
               <Box>
                 <IconBox>
                   <SiPython fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 Python
               </Box>
             </OuterBox>
@@ -216,37 +216,37 @@ export const SkillsBox = () => {
               <Box>
                 <IconBox>
                   <SiReact fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 React
               </Box>
               <Box>
                 <IconBox>
                   <SiRedux fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 Redux
               </Box>
               <Box>
                 <IconBox>
                   <SiVueDotJs fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 Vue
               </Box>
               <Box>
                 <IconBox>
                   <SiTailwindcss fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 Tailwind
               </Box>
               <Box>
                 <IconBox>
                   <SiSass fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 SASS
               </Box>
               <Box>
                 <IconBox>
                   <SiBootstrap fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 Bootstrap
               </Box>
             </OuterBox>
@@ -260,19 +260,19 @@ export const SkillsBox = () => {
               <Box less>
                 <IconBox>
                   <SiMysql fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 MySQL
               </Box>
               <Box less>
                 <IconBox>
                   <SiPostgresql fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 PostgreSQL
               </Box>
               <Box less>
                 <IconBox>
                   <SiMariadb fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 MariaDB
               </Box>
             </OuterBox>
@@ -286,19 +286,19 @@ export const SkillsBox = () => {
               <Box less>
                 <IconBox>
                   <SiGithub fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 Github
               </Box>
               <Box less>
                 <IconBox>
                   <SiNpm fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 NPM
               </Box>
               <Box less>
                 <IconBox>
                   <SiAmazonaws fontSize={25} />
-                </IconBox>{" "}
+                </IconBox>
                 AWS
               </Box>
             </OuterBox>
