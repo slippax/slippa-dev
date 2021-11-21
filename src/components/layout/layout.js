@@ -42,7 +42,7 @@ const Layout = () => {
       duration: 1500,
       delay: 50,
       smooth: true,
-      offset: -50, // Scrolls to element + 50 pixels down the page
+      offset: -35, // Scrolls to element + 50 pixels down the page
     })
   };
   const executeCreationsScroll = () => {
@@ -50,7 +50,7 @@ const Layout = () => {
       duration: 1500,
       delay: 50,
       smooth: true,
-      offset: -50, // Scrolls to element + 50 pixels down the page
+      offset: -35, // Scrolls to element + 50 pixels down the page
     })
   };
   const executeContactScroll = () => {
@@ -58,7 +58,7 @@ const Layout = () => {
       duration: 1500,
       delay: 50,
       smooth: true,
-      offset: -50, // Scrolls to element + 50 pixels down the page
+      offset: -35, // Scrolls to element + 50 pixels down the page
     })
   };
   const [theme, setTheme] = useState(LightTheme);
