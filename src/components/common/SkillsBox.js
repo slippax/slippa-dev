@@ -8,8 +8,6 @@ import {
   SiPython,
   SiRedux,
   SiTypescript,
-  SiHtml5,
-  SiCss3,
   SiMysql,
   SiPostgresql,
   SiGithub,

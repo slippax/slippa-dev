@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { NextButton } from "../../common/NextButton";
 import { useRef } from "react";
 import Fade from 'react-reveal/Zoom';
-
+import React, { useState } from "react";
+import TextTransition, { presets } from "react-text-transition";
 const Button = styled.div`
   text-align: center;
   margin-top: 30px;
@@ -52,12 +53,31 @@ const Text = styled.div`
   font-weight: 300;
   margin-bottom: ${(p) => (p.first ? "0px" : "0")};
   margin-top: ${(p) => (p.second ? "0px" : "0")};
+  display: ${(p) => (p.textanim ? "flex" : "")};
+  margin-right: ${(p) => (p.textanim ? "" : "")};
 `;
 
-export const Splash = () => {
-  const executeScroll = () =>
-    myRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+const TEXTS = [
+  "front end developer.",
+  "software developer.",
+  "creator.",
+];
 
+const TEXTS2 = [
+  "for the web.",
+  "for the future.",
+  "for purpose.",
+];
+
+export const Splash = (props) => {
+    const [index, setIndex] = useState(0);
+    React.useEffect(() => {
+      const intervalId = setInterval(() =>
+        setIndex(index => index + 1),
+        4000 // every 3 seconds
+      );
+      return () => clearTimeout(intervalId);
+    }, []);
   const myRef = useRef(null);
   return (
     <div>
@@ -68,10 +88,16 @@ export const Splash = () => {
           <NameBox>
             <Subtitle><Fade cascade>Stephen Lippa.</Fade></Subtitle>
           </NameBox>
-          <Text first><Fade cascade delay={1500}>I am a front end developer.</Fade></Text>
-          <Text second><Fade cascade delay={1500}>I build things for the web.</Fade></Text>
-          <Fade delay={3000}>
-          <Button onClick={executeScroll}>
+          <Text textanim first><Fade cascade delay={1500}>I am a <TextTransition direction="down" noOverflow
+        text={ TEXTS[index % TEXTS.length] }
+        springConfig={ presets.wobbly }
+      /></Fade></Text>
+          <Text textanim second><Fade cascade delay={1500}>I build things <TextTransition direction="down" noOverflow 
+        text={ TEXTS2[index % TEXTS2.length] }
+        springConfig={ presets.wobbly }
+      /></Fade></Text>
+          <Fade delay={2500}>
+          <Button onClick={props.continueclick}>
             <NextButton text="VIEW" />
           </Button>
           </Fade>

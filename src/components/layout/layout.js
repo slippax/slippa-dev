@@ -1,7 +1,8 @@
-import { useState, useRef } from "react";
+import { useState} from "react";
 import { Header, Backdrop, WavesEntry, WavesEnd } from "../common/";
 import { Splash, About, Contact, Creations } from "./sections";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
+import { Element, scroller } from 'react-scroll'
 import LightTheme from "../themes/light";
 import DarkTheme from "../themes/dark";
 import styled from "styled-components";
@@ -36,18 +37,29 @@ const Particles = styled.div`
 `;
 
 const Layout = () => {
-  let about = useRef();
-  let creations = useRef();
-  let contact = useRef();
-  const executeAboutScroll = (value) => {
-    console.log(value)
-    about.current.scrollIntoView({ behavior: "smooth", block: "start" });
+  const executeAboutScroll = () => {
+    scroller.scrollTo('about', {
+      duration: 1500,
+      delay: 50,
+      smooth: true,
+      offset: -50, // Scrolls to element + 50 pixels down the page
+    })
   };
   const executeCreationsScroll = () => {
-    creations.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    scroller.scrollTo('creations', {
+      duration: 1500,
+      delay: 50,
+      smooth: true,
+      offset: -50, // Scrolls to element + 50 pixels down the page
+    })
   };
   const executeContactScroll = () => {
-    contact.current.scrollIntoView({ behavior: "smooth", block: "start" });
+    scroller.scrollTo('contact', {
+      duration: 1500,
+      delay: 50,
+      smooth: true,
+      offset: -50, // Scrolls to element + 50 pixels down the page
+    })
   };
   const [theme, setTheme] = useState(LightTheme);
   
@@ -81,18 +93,23 @@ const Layout = () => {
           contactclick={executeContactScroll}
           switch={themeSetter}
         />
-        <Splash />
-        <div ref={about} />
+        <Splash continueclick={executeAboutScroll} />
+        
+        <div />
         <WavesEntry/>
-        <About />
+        <Element name="about">
+        <About/>
+        </Element>
         <WavesEnd/>
-        <div ref={creations} />
+        <Element name="creations">
         <Creations />
-        <div ref={contact} />
+        </Element>
         <WavesEntry/>
+        <Element name="contact">
         <Contact />
+        </Element>
         <WavesEnd/>
-        <BottomTag><Flip cascade delay={200}>Built by Stephen Lippa | 2021</Flip></BottomTag>
+        <BottomTag id="aboutcontainer"><Flip cascade delay={200}>Built by Stephen Lippa | 2021</Flip></BottomTag>
       </ThemeProvider>
     </div>
   );

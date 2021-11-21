@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { useRef } from "react";
-import { MailButton, Toast } from "../../common/";
+import { MailButton} from "../../common/";
 import { FaGithubSquare, FaLinkedin } from "react-icons/fa";
 import Fade from "react-reveal/Fade";
 import { AnimatedSVG } from "../../common/AnimatedSVG";
