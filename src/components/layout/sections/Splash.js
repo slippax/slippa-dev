@@ -88,15 +88,15 @@ export const Splash = (props) => {
           <NameBox>
             <Subtitle><Fade cascade>Stephen Lippa.</Fade></Subtitle>
           </NameBox>
-          <Text textanim first><Fade cascade delay={1500}>I am a <TextTransition direction="down" noOverflow
+          <Text textanim first><Fade cascade delay={2000}>I am a <TextTransition direction="down" noOverflow
         text={ TEXTS[index % TEXTS.length] }
         springConfig={ presets.wobbly }
       /></Fade></Text>
-          <Text textanim second><Fade cascade delay={1500}>I build things <TextTransition direction="down" noOverflow 
+          <Text textanim second><Fade cascade delay={2000}>I build things <TextTransition direction="down" noOverflow 
         text={ TEXTS2[index % TEXTS2.length] }
         springConfig={ presets.wobbly }
       /></Fade></Text>
-          <Fade delay={2500}>
+          <Fade delay={2000}>
           <Button onClick={props.continueclick}>
             <NextButton text="VIEW" />
           </Button>
