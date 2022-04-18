@@ -9,25 +9,37 @@ const Button = styled.div`
   margin-top: 30px;
 `;
 const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
+
   height: 100vh;
-  justify-content: center;
 `;
 
 const Container = styled.div`
   position: absolute;
   top: 19%;
+  left: 6%;
   @media (min-width: 450px) {
+    left: 6%;
+    padding: 1em;
     font-size: 1.2em;
+    max-width: 450px;
   }
   @media (min-width: 700px) {
+    left: 20%;
+    padding: 2em;
     font-size: 1.4em;
+    max-width: 700px;
   }
   @media (min-width: 1000px) {
+    left: 33%;
+    padding: 2em;
     max-width: 1000px;
     font-size: 1.5em;
   }
+`;
+
+const BtnContainer = styled.div`
+  position: relative;
+  padding-top: 1.5em;
 `;
 
 const Title = styled.div`
@@ -38,6 +50,10 @@ const Title = styled.div`
 
 const NameBox = styled.div`
   display: flex;
+`;
+
+const MainHeader = styled.div`
+  
 `;
 
 const Subtitle = styled.div`
@@ -60,12 +76,12 @@ const Text = styled.div`
 const TEXTS = [
   "front end developer.",
   "software developer.",
-  "creator.",
+  "creative thinker.",
 ];
 
 const TEXTS2 = [
   "for the web.",
-  "for the future.",
+  "for humankind.",
   "for purpose.",
 ];
 
@@ -83,25 +99,29 @@ export const Splash = (props) => {
     <div>
       <Wrapper>
         <Container>
-          
+<MainHeader>
           <Title><Fade cascade>Hi, my name is</Fade></Title>
           <NameBox>
             <Subtitle><Fade cascade>Stephen Lippa.</Fade></Subtitle>
           </NameBox>
+          </MainHeader>
           <Text textanim first><Fade cascade delay={2000}>I am a <TextTransition direction="down" noOverflow
         text={ TEXTS[index % TEXTS.length] }
         springConfig={ presets.wobbly }
       /></Fade></Text>
-          <Text textanim second><Fade cascade delay={2000}>I build things <TextTransition direction="down" noOverflow 
+          <Text textanim second><Fade cascade delay={2000}>I build things <TextTransition delay={1000} direction="down" noOverflow 
         text={ TEXTS2[index % TEXTS2.length] }
         springConfig={ presets.wobbly }
       /></Fade></Text>
-          <Fade delay={2000}>
+       <BtnContainer>
+        <Fade delay={2000}>
           <Button onClick={props.continueclick}>
             <NextButton text="VIEW" />
           </Button>
           </Fade>
+          </BtnContainer>
         </Container>
+       
       </Wrapper>
       <div ref={myRef}></div>
     </div>

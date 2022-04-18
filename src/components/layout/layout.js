@@ -39,7 +39,7 @@ const Particles = styled.div`
 const Layout = () => {
   const executeAboutScroll = () => {
     scroller.scrollTo('about', {
-      duration: 1500,
+      duration: 1000,
       delay: 50,
       smooth: true,
       offset: -35, // Scrolls to element + 50 pixels down the page
@@ -47,7 +47,7 @@ const Layout = () => {
   };
   const executeCreationsScroll = () => {
     scroller.scrollTo('creations', {
-      duration: 1500,
+      duration: 1000,
       delay: 50,
       smooth: true,
       offset: -35, // Scrolls to element + 50 pixels down the page
@@ -55,7 +55,7 @@ const Layout = () => {
   };
   const executeContactScroll = () => {
     scroller.scrollTo('contact', {
-      duration: 1500,
+      duration: 1000,
       delay: 50,
       smooth: true,
       offset: -35, // Scrolls to element + 50 pixels down the page
