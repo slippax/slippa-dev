@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.5bd52afd.css",
-    "main.js": "/static/js/main.6bb8e887.js",
+    "main.js": "/static/js/main.1933a22d.js",
     "static/js/845.d53b0d45.chunk.js": "/static/js/845.d53b0d45.chunk.js",
     "static/js/377.cf17a473.chunk.js": "/static/js/377.cf17a473.chunk.js",
     "static/media/virustrackr.gif": "/static/media/virustrackr.f1d8ab7cb4ad039443a7.gif",
@@ -13,16 +13,16 @@
     "static/media/virustrackr.JPG": "/static/media/virustrackr.4819f3a75924c20dcc50.JPG",
     "static/media/todolist.JPG": "/static/media/todolist.02a25872b734117b9e19.JPG",
     "static/media/ezimg.JPG": "/static/media/ezimg.42484cf7729d21288dbb.JPG",
-    "static/media/off.mp3": "/static/media/off.72b678499e30608f9db4.mp3",
-    "static/media/on.mp3": "/static/media/on.ff71774546d5a077f319.mp3",
+    "static/media/on.mp3": "/static/media/on.72b678499e30608f9db4.mp3",
+    "static/media/off.mp3": "/static/media/off.ff71774546d5a077f319.mp3",
     "index.html": "/index.html",
     "main.5bd52afd.css.map": "/static/css/main.5bd52afd.css.map",
-    "main.6bb8e887.js.map": "/static/js/main.6bb8e887.js.map",
+    "main.1933a22d.js.map": "/static/js/main.1933a22d.js.map",
     "845.d53b0d45.chunk.js.map": "/static/js/845.d53b0d45.chunk.js.map",
     "377.cf17a473.chunk.js.map": "/static/js/377.cf17a473.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5bd52afd.css",
-    "static/js/main.6bb8e887.js"
+    "static/js/main.1933a22d.js"
   ]
 }
